@@ -1,0 +1,31 @@
+# Node modules (npm packages)
+node_modules/
+
+# Environment variable files
+.env
+app/.env
+
+# Log files
+*.log
+
+# Docker volumes (optional, agar bind mounts use kar rahe ho)
+mongo-data/
+*.pid
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
+
+# Dependency lock files (optional, if not needed in git)
+# package-lock.json
+# yarn.lock
+
+# Test result files or coverage
+coverage/
+*.lcov
+
+# Docker-related
+**/docker-compose.override.yml
