@@ -6,10 +6,13 @@ services:
       - "3000:3000"
     depends_on:
       - mongo
-    volumes:
-      - .:/app
     env_file:
       - app/.env
+    command: ["./wait-for-mongo.sh"]
+    volumes:
+      - ./wait-for-mongo.sh:/wait-for-mongo.sh
+    working_dir: /app
+
   mongo:
     image: mongo
     ports:
